@@ -38,7 +38,7 @@ function createRandomUser() {
     birthdate: faker.date.birthdate(),
     registeredAt: faker.date.past(),
     visitCount: faker.random.numeric(),
-    lifetimeSpend: faker.finance.amount(0, 100000, 2, "$"),
+    lifetimeSpend: faker.finance.amount(0, 100000, 2),
   };
 }
 
