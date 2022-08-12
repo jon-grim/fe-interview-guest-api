@@ -26,13 +26,19 @@ function runMiddleware(
 
 function createRandomUser() {
   return {
-    userId: faker.datatype.uuid(),
+    id: faker.datatype.uuid(),
     name: faker.name.fullName(),
+    address: {
+      state: faker.address.state(),
+      zip: faker.address.zipCode(),
+      timezone: faker.address.timeZone(),
+    },
     email: faker.internet.email(),
     avatar: faker.image.avatar(),
     birthdate: faker.date.birthdate(),
     registeredAt: faker.date.past(),
     visitCount: faker.random.numeric(),
+    lifetimeSpend: faker.finance.amount(0, 100000, 2, "$"),
   };
 }
 
