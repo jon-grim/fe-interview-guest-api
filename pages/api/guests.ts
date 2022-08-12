@@ -9,6 +9,7 @@ function createRandomUser() {
     avatar: faker.image.avatar(),
     birthdate: faker.date.birthdate(),
     registeredAt: faker.date.past(),
+    visitCount: faker.random.numeric(),
   };
 }
 
